@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "TYHomeTabBarController.h"
+
+#define SCREENBOUNDS [UIScreen mainScreen].bounds
 
 @interface AppDelegate ()
 
@@ -16,7 +19,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //创建HomeTabbar
+    TYHomeTabBarController *homeTabbarController = [[TYHomeTabBarController alloc]init];
+    self.window = [[UIWindow alloc]initWithFrame:SCREENBOUNDS];
+    self.window.rootViewController = homeTabbarController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
