@@ -66,6 +66,7 @@
     //创建Movie
     TYMovieViewController *movieViewController = [[TYMovieViewController alloc]init];
     TYMovieNavigationController *movieNavigationController = [[TYMovieNavigationController alloc]initWithRootViewController:movieViewController];
+    movieViewController.view.backgroundColor = [UIColor yellowColor];
     movieNavigationController.tabBarItem.image = [UIImage imageNamed:@"tab_movie_default"];
     movieNavigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_movie_selected"];
     movieNavigationController.tabBarItem.title = @"电影";
